@@ -172,9 +172,7 @@ def dict_to_mat(d, n_rows, n_cols):
     return csr_matrix((data, (rows, cols)), shape=(n_rows, n_cols))
 
 class KeywordSummarizer:
-    def __init__(self, sents=None, tokenize=None, min_count=2,
-        window=-1, min_cooccurrence=2, vocab_to_idx=None,
-        df=0.85, max_iter=30, verbose=False):
+    def __init__(self, sents=None, tokenize=None, min_count=2, window=-1, min_cooccurrence=2, vocab_to_idx=None, df=0.85, max_iter=30, verbose=False):
 
         self.tokenize = tokenize
         self.min_count = min_count
