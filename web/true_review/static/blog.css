@@ -165,3 +165,7 @@ h6 {
     color: #ecbe24;
   }
 }
+
+.bg-zz {
+  background-color: #ff5131 !important;
+}
