@@ -6,23 +6,16 @@
 .
 ├── README.md
 ├── data
-│   ├── final_train_data_3.txt
-│   └── 애매한영화
+│   ├── wordcloud
+│   └── output
 ├── get_model.py
 ├── macro.py
 ├── pytorch_flaskapp.ipynb
 ├── rawdata
-│   ├── 5
-│   ├── 5_0827
-│   ├── 5_0828
-│   ├── 6
-│   ├── 6_0827
-│   ├── 6_0828
-│   ├── 6_0829
-│   └── 애매한영화
 ├── tagging_rating.ipynb
 ├── textrank.py
 └── web
+    ├── README.md
     ├── config.py
     ├── init_db.sh
     ├── migrations
@@ -32,7 +25,6 @@
     ├── true_review
     └── true_review.db
 
-15 directories, 12 files
+17 directories, 13 files
 ```
-
 
