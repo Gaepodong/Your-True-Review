@@ -6,10 +6,20 @@
 .
 ├── README.md
 ├── data
+│   ├── final_train_data_3.txt
+│   ├── 애매한영화
 ├── get_model.py
 ├── macro.py
 ├── pytorch_flaskapp.ipynb
 ├── rawdata
+│   ├── 5
+│   ├── 5_0828
+│   ├── 6_0827
+│   ├── 6_0829
+│   ├── 5_0827
+│   ├── 6
+│   ├── 6_0828
+│   ├── 애매한영화
 └── textrank.py
 
 2 directories, 5 files
