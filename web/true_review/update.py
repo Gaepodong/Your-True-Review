@@ -67,8 +67,8 @@ def update_reviews(movie):
             if i == 0:
                 continue
             if i == 1:
-                # movie.review_score = line[4]
-                movie.review_score = 8.94
+                movie.review_score = round(float(line[5]), 2)
+                print("score: ", movie.review_score)
             text_rank = float(line[1])
             content = line[2]
             pos_or_neg = int(line[3])

@@ -166,6 +166,7 @@ h6 {
   }
 }
 
-.bg-zz {
-  background-color: #ff5131 !important;
+.bg-ours {
+  background-color: #34558b !important;
+  /* background-color: #ff5131; */
 }
