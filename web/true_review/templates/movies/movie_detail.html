@@ -72,6 +72,17 @@
           color: #ecbe24;
         }
       }
+      .test {
+        position: 'absolute';
+        height: '300px';
+        width: 'auto';
+      }
+
+      @media (max-width: 1000px) {
+        .test {
+          position: 'center';
+        }
+      }
     </style>
     <!-- Custom styles for this template -->
     <link
@@ -105,60 +116,74 @@
   <body>
     <div class="container">
       <div
-        class="jumbotron p-4 p-md-5 text-white rounded bg-ours"
-        style="margin-bottom: 0; padding: 10px 10px 10px 10px"
+        class="p-4 p-md-5 text-black rounded"
+        style="
+          margin-bottom: 0;
+          padding: 0 !important;
+          background-color: #34558b;
+        "
       >
         <div class="col-md-12 px-0">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
               <img
                 src="{{ movie.image_path }}"
-                position="absolute"
-                width="50%"
-                height="50%"
+                height="340px"
+                width="auto"
+                style="display: block; margin: 0 auto"
               />
+              <!--<img src="{{ movie.image_path }}" class="test" />-->
             </div>
-            <div class="col-md-6">
-              <h1 class="display-4 font-italic" style="text-align: left">
-                영화 <br />
-              </h1>
-              <h4
+            <div class="col-md-8" style="padding-bottom: 20px">
+              <!-- <h1 class="display-4 font-italic" style="text-align: left">
+                <br />
+              </h1> -->
+              <div
                 class="display-3"
                 style="font-family: 'Helvetica Neue'; text-align: center"
               >
-                "{{ movie.title }}" <br />
-              </h4>
-              <h1 class="display-4 font-italic" style="text-align: right">
-                긍정/부정 리뷰입니다.<br />
-              </h1>
+                "{{ movie.title }}"
+              </div>
+              <div
+                class="display-4"
+                style="font-family: 'Helvetica Neue'; text-align: center"
+              >
+                분석 결과 입니다.
+                <br />
+              </div>
+              <div class="row">
+                <div class="col-md-12" style="text-align: center">
+                  <img src="/static/naver.png" />
+                  <div style="font-family: 'Helvetica Neue'; color: white">
+                    : {{movie.score}} / 10.0
+                  </div>
+                  <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div
+                      class="full-stars"
+                      style="width: {{ movie.score * 10 }}%"
+                    ></div>
+                  </div>
+                  <br />
+                  <img
+                    src="https://fontmeme.com/permalink/200910/109ba0996778b6d9b99ce3ec7deee89e.png"
+                    width="123px"
+                    height="31px"
+                    style="display: inline"
+                  />
+                  <div style="font-family: 'Helvetica Neue'; color: white">
+                    : {{movie.review_score}} / 10.0
+                  </div>
+                  <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div
+                      class="full-stars"
+                      style="width: {{ movie.review_score * 10 }}%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <img src="/static/naver.png" />
-          <div class="ratings">
-            <div class="empty-stars"></div>
-            <div
-              class="full-stars"
-              style="width: {{ movie.review_score * 10 }}%"
-            ></div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img
-            src="https://fontmeme.com/permalink/200910/109ba0996778b6d9b99ce3ec7deee89e.png"
-            width="123px"
-            height="31px"
-          />
-          <div class="ratings">
-            <div class="empty-stars"></div>
-            <div
-              class="full-stars"
-              style="width: {{ movie.score * 10 }}%"
-            ></div>
           </div>
         </div>
       </div>
