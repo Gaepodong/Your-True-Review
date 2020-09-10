@@ -184,7 +184,6 @@ class KeywordSummarizer:
         self.df = df
         self.max_iter = max_iter
         self.verbose = verbose
-
         if sents is not None:
             self.train_textrank(sents)
 
