@@ -243,4 +243,3 @@ for f in trange(len(files)):
     plt.imshow(neg_array, interpolation='bilinear')
     plt.axis('off')
     neg_fig.savefig('/Users/yohan/Your-True-Review/data/wordcloud/' + name[:-4] + '_neg')
-
