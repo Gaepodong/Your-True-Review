@@ -1,0 +1,165 @@
+ * Serving Flask app "true_review" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+Traceback (most recent call last):
+  File "/home/sanam/Desktop/project/venv/bin/flask", line 8, in <module>
+    sys.exit(main())
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/cli.py", line 967, in main
+    cli.main(args=sys.argv[1:], prog_name="python -m flask" if as_module else None)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/cli.py", line 586, in main
+    return super(FlaskGroup, self).main(*args, **kwargs)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/click/decorators.py", line 73, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/cli.py", line 860, in run_command
+    extra_files=extra_files,
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/werkzeug/serving.py", line 1030, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+ * Serving Flask app "true_review" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+127.0.0.1 - - [10/Sep/2020 15:10:53] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [10/Sep/2020 15:10:53] "[37mGET /movies/list/ HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:10:54] "[37mGET /movies/movie/116532/1/ HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:10:58] "[37mPOST /comment/get_and_analysis/28 HTTP/1.1[0m" 200 -
+ * Serving Flask app "true_review" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+127.0.0.1 - - [10/Sep/2020 15:11:14] "[37mGET /movies/movie/116532/1/ HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:11:16] "[37mGET /movies/movie/109960/1/ HTTP/1.1[0m" 200 -
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/models.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/models.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/models.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/models.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/models.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+ * Detected change in '/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/update.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 315-142-287
+127.0.0.1 - - [10/Sep/2020 15:39:44] "[35m[1mGET /movies/movie/116532/1/ HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: movies.score
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 2464, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/sanam/Desktop/project/automatic_tagging_review_ratings/true_review/views/movies_views.py", line 19, in movie
+    movie = db.session.query(Movies).filter_by(code=movie_code).first()
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3402, in first
+    ret = list(self[0:1])
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3176, in __getitem__
+    return list(res)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3508, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3533, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/sanam/Desktop/project/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: movies.score
+[SQL: SELECT movies.id AS movies_id, movies.title AS movies_title, movies.code AS movies_code, movies.create_date AS movies_create_date, movies.image_path AS movies_image_path, movies.score AS movies_score, movies.review_score AS movies_review_score 
+FROM movies 
+WHERE movies.code = ?
+ LIMIT ? OFFSET ?]
+[parameters: (116532, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+127.0.0.1 - - [10/Sep/2020 15:39:44] "[37mGET /movies/movie/116532/1/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:39:45] "[37mGET /movies/movie/116532/1/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:39:45] "[37mGET /movies/movie/116532/1/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:39:45] "[37mGET /movies/movie/116532/1/?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:39:45] "[37mGET /movies/movie/116532/1/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/Sep/2020 15:39:45] "[37mGET /movies/movie/116532/1/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -

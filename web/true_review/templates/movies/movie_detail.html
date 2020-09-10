@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v4.1.1" />
+    <title>{{ movie.title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap.css') }}"
+    />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .ratings {
+        position: relative;
+        vertical-align: middle;
+        display: inline-block;
+        color: #b1b1b1;
+        overflow: hidden;
+      }
+
+      .full-stars {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #fde16d;
+      }
+
+      .empty-stars:before,
+      .full-stars:before {
+        content: '\2605\2605\2605\2605\2605';
+        font-size: 14pt;
+      }
+
+      .empty-stars:before {
+        -webkit-text-stroke: 1px #848484;
+      }
+
+      .full-stars:before {
+        -webkit-text-stroke: 1px orange;
+      }
+
+      /* Webkit-text-stroke is not supported on firefox or IE */
+      /* Firefox */
+      @-moz-document url-prefix() {
+        .full-stars {
+          color: #ecbe24;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
+      rel="stylesheet"
+    />
+    <!-- Star rating icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='blog.css') }}"
+    />
+
+    <script>
+      showHideFlag = 0;
+
+      window.onload = function hide() {
+        if (showHideFlag == 0) {
+          document.getElementById('showHide').style.display = 'none';
+        } else {
+          document.getElementById('showHide').style.display = 'block';
+        }
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div
+        class="jumbotron p-4 p-md-5 text-white rounded bg-ours"
+        style="margin-bottom: 0; padding: 10px 10px 10px 10px"
+      >
+        <div class="col-md-12 px-0">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                src="{{ movie.image_path }}"
+                position="absolute"
+                width="50%"
+                height="50%"
+              />
+            </div>
+            <div class="col-md-6">
+              <h1 class="display-4 font-italic" style="text-align: left">
+                영화 <br />
+              </h1>
+              <h4
+                class="display-3"
+                style="font-family: 'Helvetica Neue'; text-align: center"
+              >
+                "{{ movie.title }}" <br />
+              </h4>
+              <h1 class="display-4 font-italic" style="text-align: right">
+                긍정/부정 리뷰입니다.<br />
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="/static/naver.png" />
+          <div class="ratings">
+            <div class="empty-stars"></div>
+            <div
+              class="full-stars"
+              style="width: {{ movie.review_score * 10 }}%"
+            ></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="https://fontmeme.com/permalink/200910/109ba0996778b6d9b99ce3ec7deee89e.png"
+            width="123px"
+            height="31px"
+          />
+          <div class="ratings">
+            <div class="empty-stars"></div>
+            <div
+              class="full-stars"
+              style="width: {{ movie.score * 10 }}%"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded flex-md-row mb-4 shadow-sm h-md-250 overflow-auto position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-primary">긍정 대표 리뷰</h3>
+              <ol>
+                {% for review in review_list %} {% if review.pos_or_neg == True
+                %}
+                <li>{{ review.content }}</li>
+                <br />
+                {% endif %} {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-auto flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="d-inline-block mb-2 text-danger">부정 대표 리뷰</h3>
+              <ol>
+                {% for review in review_list %} {% if review.pos_or_neg == False
+                %}
+                <li>{{ review.content }}</li>
+                <br />
+                {% endif %} {% endfor %}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form
+            class="Gripost-form my-3"
+            action="{{ url_for('comment.get_and_analysis', movie_id=movie.id) }}"
+            method="post"
+          >
+            {{ form.csrf_token }} {% for field, errors in form.errors.items() %}
+            <div class="alert alert-danger" role="alert">
+              <strong>{{ form[field].label }}</strong>: {{ ', '.join(errors) }}
+            </div>
+            {% endfor %} {% if not form.errors.items()%} {% if isFirstRender ==
+            0 %}
+            <script>
+              showHideFlag = 1;
+            </script>
+            {% endif %} {% endif %}
+            <div class="form-group">
+              <textarea
+                class="col-md-12"
+                name="content"
+                id="content"
+                rows="4"
+                resize="none"
+                placeholder="댓글 등록이 가능합니다. 당신의 리뷰를 추가해주세요!"
+                display="inline"
+              ></textarea>
+            </div>
+            <div class="float-right form-group">
+              <div class="col-sm-10"></div>
+              <button type="submit" class="btn btn-outline-primary">
+                저장하기
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="showHide">
+        <span class="bg-light"> 당신이 작성한 리뷰</span>
+        <div
+          class="row no-gutters border rounded flex-md-row mb-4 shadow-sm overflow-auto position-relative"
+          style="height: 100px"
+        >
+          {{ comment.content }}
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="bg-light rounded">
+              {% if comment == None %}
+              <p class="comment-analaysis">
+                당신은 영화 "{{ movie.title }}"에 대해 null % 긍정, null %
+                부정의 마음을 표하셨습니다!
+              </p>
+              <br />
+              {% else %}
+              <p class="comment-analaysis">
+                당신은 영화 "{{ movie.title }}"에 대해
+                <br />
+                {% if comment.pos_or_neg == 1 %}
+                <span style="color: blue">
+                  {{ '%0.2f' % (comment.emotion_percent) }} % 긍정</span
+                >,
+
+                <span style="color: red">
+                  {{ '%0.2f' % (100 - comment.emotion_percent) }} % 부정</span
+                >의 {% else %}
+                <span style="color: blue">
+                  {{ '%0.2f' % (100 - comment.emotion_percent) }} % 긍정</span
+                >,
+                <span style="color: red">
+                  {{ '%0.2f' % (comment.emotion_percent) }} % 부정</span
+                >의 {% endif %} 마음을 표하셨습니다!
+              </p>
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bg-light rounded">
+              {% for star in range(10) %} {% if comment == None %} {% else %} {%
+              if star < comment.movie_rating %}
+              <span class="fa fa-star checked" style="color: orange"></span>
+              {% else %}
+              <span class="fa fa-star"></span>
+              {% endif %} {% endif %} {% endfor %}
+              <br />
+              <p class="font-italic" style="display: block">
+                리뷰에서 추출한 평점: {{ comment.movie_rating }}점
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="blog-footer">
+      <p>
+        <a href="http://13.124.8.184:5000/movies/list/">
+          <button type="button" class="btn btn-primary bg-ours">
+            이전 페이지
+          </button>
+        </a>
+        <a href="#">
+          <button type="button" class="btn btn-primary bg-ours">위로</button>
+        </a>
+      </p>
+      <p>
+        by
+        <a href="https://github.com/Gaepodong/automatic_tagging_review_ratings"
+          >team gaepodong</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
