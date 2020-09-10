@@ -13,9 +13,7 @@ from kobert.pytorch_kobert import get_pytorch_kobert_model
 from transformers import AdamW
 from transformers.optimization import WarmupLinearSchedule
 
-##GPU 사용 시
-# device = torch.device("cuda:0")
-device = torch.device("cpu")
+device = torch.device("cuda:0")
 
 class BERTClassifier(nn.Module):
     def __init__(self,
