@@ -21,9 +21,18 @@
 │   ├── 6_0829
 │   └── 애매한영화
 ├── tagging_rating.ipynb
-└── textrank.py
+├── textrank.py
+└── web
+    ├── config.py
+    ├── init_db.sh
+    ├── migrations
+    ├── nohup.out
+    ├── ranked_reviews
+    ├── requirements.txt
+    ├── true_review
+    └── true_review.db
 
-11 directories, 7 files
+15 directories, 12 files
 ```
 
 
