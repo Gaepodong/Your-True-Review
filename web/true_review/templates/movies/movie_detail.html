@@ -166,16 +166,12 @@
                 분석 결과 입니다.
                 <br />
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <br />
-      <div class="row">
-        <div class="col-md-2 please">
-          <img src="/static/naver.png" style="display: inline" />
-          <div style="font-family: 'Helvetica Neue'; color: black">
+              <br>
+      <div class="row" style="justify-content: space-evenly ">
+        <span>  
+          <img src="/static/naver" width="123px" height="31px" style="display: inline" />
+          <div style="font-family: 'Helvetica Neue'; color: black; text-align:center;">
             {{movie.score}} / 10.0
             <br />
             <div class="ratings">
@@ -186,15 +182,15 @@
               ></div>
             </div>
           </div>
-        </div>
-        <div class="col-md-2 please">
-          <img
+        </span>
+        <span>
+            <img
             src="https://fontmeme.com/permalink/200910/109ba0996778b6d9b99ce3ec7deee89e.png"
             widwth="123px"
             height="31px"
             style="display: inline"
           />
-          <div style="font-family: 'Helvetica Neue'; color: black">
+          <div style="font-family: 'Helvetica Neue'; color: black; text-align:center;">
             {{movie.review_score}} / 10.0
             <br />
             <div class="ratings">
@@ -205,8 +201,15 @@
               ></div>
             </div>
           </div>
+        </span>
+      </div>
+
+            </div>
+          </div>
         </div>
       </div>
+
+      <br />
 
       <br />
       <div class="row mb-2">
@@ -215,10 +218,10 @@
             class="row no-gutters border rounded flex-md-row mb-4 shadow-sm h-md-250 overflow-auto position-relative"
           >
             <div class="col p-4 d-flex flex-column position-static">
-            <a href="/static/wordcloud/{{movie.code}}_pos.png" data-toggle="lightbox" >
-              <h3 class="d-inline-block mb-2 text-primary">긍정 대표 리뷰(wordcloud)</h3>
-            </a>
-              <ol>
+              <ol> <h3 class="d-inline-block mb-2 text-primary">긍정 대표 리뷰 
+                <a href="/static/wordcloud/{{movie.code}}_pos.png" data-toggle="lightbox" >
+                <img src="/static/cloud.png" height="30px" width="30px">
+            </a></h3>
                 {% for review in review_list %} {% if review.pos_or_neg == True
                 %}
                 <li>{{ review.content }}</li>
@@ -233,10 +236,10 @@
             class="row no-gutters border rounded overflow-auto flex-md-row mb-4 shadow-sm h-md-250 position-relative"
           >
             <div class="col p-4 d-flex flex-column position-static">
-            <a href="/static/wordcloud/{{movie.code}}_neg.png" data-toggle="lightbox" >
-              <h3 class="d-inline-block mb-2 text-danger">부정 대표 리뷰(wordcloud)</h3>
-              </a>
-              <ol>
+              
+              <ol> <h3 class="d-inline-block mb-2 text-danger"> 부정 대표 리뷰 <a href="/static/wordcloud/{{movie.code}}_neg.png" data-toggle="lightbox" >
+                <img src="/static/cloud_neg.png" height="30px" width="30px">
+              </a></h3>
                 {% for review in review_list %} {% if review.pos_or_neg == False
                 %}
                 <li>{{ review.content }}</li>
