@@ -170,3 +170,13 @@ h6 {
   background-color: #34558b !important;
   /* background-color: #ff5131; */
 }
+
+.please {
+  display: inline !important;
+}
+
+@media (min-width: 576px) {
+  .please {
+    display: inline !important;
+  }
+}
