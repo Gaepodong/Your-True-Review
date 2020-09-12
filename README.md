@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Gaepodong/Your-True-Review">
-    <img src="https://fontmeme.com/permalink/200910/109ba0996778b6d9b99ce3ec7deee89e.png" alt="Logo" width="80" height="80">
+    <img src="https://fontmeme.com/permalink/200910/109ba0996778b6d9b99ce3ec7deee89e.png" alt="Logo" width="200" height="80">
   </a>
 
   <h3 align="center">Your-True-Review</h3>
