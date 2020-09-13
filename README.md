@@ -104,6 +104,9 @@ flask run
 ```
 
 ### Run
+
+[Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing)
+
 ![image](/demonstration.gif)
 
 ## Contact
