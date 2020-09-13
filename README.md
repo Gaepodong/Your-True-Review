@@ -138,4 +138,4 @@ python macro.py
 ## License
 
   - [Bootstrap](https://github.com/Gaepodong/Your-True-Review/blob/master/LICENSE/bootstrap)
-
+  - [KoBERT](https://github.com/Gaepodong/Your-True-Review/blob/master/LICENSE/KoBERT)
