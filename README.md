@@ -104,7 +104,7 @@ flask run
 ```
 
 ### Run
-![image](/attachments/2db8f44b-4c2f-4cf8-94e1-658719e68907)
+![image](/demonstration.gif)
 
 ## Contact
 
