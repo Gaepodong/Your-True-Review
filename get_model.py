@@ -49,13 +49,17 @@ class new_bert(nn.Module):
     def __init__(self, model, hidden_size = 768):
         super(new_bert, self).__init__()
         self.main_model = model
-        self.fc1 = nn.Linear(hidden_size, 512)
-        self.fc2 = nn.Linear(512, 11) # output is rating.
+        self.fc1 = nn.Linear(hidden_size + 2, 512)
+        self.fc2 = nn.Linear(512, 11)
+        self.soft = nn.Softmax()
 
     def forward(self, token_ids, valid_length, segment_ids):
         x, np_cls = self.main_model(token_ids, valid_length, segment_ids)
-        x = self.fc1(x)
-        
+        x2 = self.soft(np_cls)
+
+        new_input = torch.cat([x, x2],1)
+
+        x = self.fc1(new_input) 
         x = F.gelu(x)
         rating_pred = self.fc2(x)
         return rating_pred, np_cls
@@ -93,21 +97,20 @@ class get_model():
         self.old_model = BERTClassifier(self.bertmodel,  dr_rate=0.5).to(device)
         self.to_model = new_bert(self.old_model).to(device)
         load_model = True
-        start_point = 24
         if load_model:
-            self.to_model.load_state_dict(torch.load('/Users/yohan/Downloads/jungwlee/model/model_'+str(start_point), map_location=device))
+            self.to_model.load_state_dict(torch.load('movie_model', map_location=device))
             print("load model")
 
     def calc_accuracy(self, X, Y):
         max_vals, max_indices = torch.max(X, 1)
         train_acc = (max_indices == Y).sum().data.cpu().numpy()/max_indices.size()[0]
         return train_acc
-    
+
     def inference(self, input_x):
         transform = nlp.data.BERTSentenceTransform(self.tok, max_seq_length=max_len, pad=True, pair=False)
         #input_set = nlp.data.TSVDataset(input_x, field_indices=[0])
         
-        query = transform([input_x])
+        query = transform([str(input_x)])
         
         query_2 = np.zeros_like([1])
         query_2[0] = query[1]
@@ -115,6 +118,6 @@ class get_model():
         token_ids = torch.LongTensor(query[0]).unsqueeze(0).to(device)
         length = torch.LongTensor(query_2)
         segment_ids = torch.LongTensor(query[2]).unsqueeze(0).to(device)
-   
+        
         rating_pred, np_cls = self.to_model(token_ids, length, segment_ids)
         return rating_pred, np_cls
