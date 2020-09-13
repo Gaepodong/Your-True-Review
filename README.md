@@ -44,13 +44,13 @@
 .
 ├── README.md
 ├── data
-│   ├── wordcloud
+│   ├── wordcloud
 │   └── output
 ├── get_model.py
-├── macro.py
-├── pytorch_flaskapp.ipynb
+├── macro.py ------------------------ Get Key-Sentences & Wordclouds
+├── pytorch_flaskapp.ipynb ---------- Sentiment Analysis & Predict Ratings API Server
 ├── rawdata
-├── tagging_rating.ipynb
+├── tagging_rating.ipynb ------------ Train Model
 ├── textrank.py
 └── web
     ├── README.md
@@ -73,6 +73,12 @@
 - python3
 - python3-pip
 - python venv
+- mxnet-cu101
+- glonnlp
+- sentencepiece==0.1.85
+- transformers==2.1.1
+- torch==1.3.1
+- konlpy (mecab)
 
 ### Installing
 
@@ -95,6 +101,11 @@ cd Your-True-Review/web && pip install -r requirements.txt
 5. Run the Server
 ```
 flask run
+```
+6. Get Key-Sentences & Wordcloud
+```
+# Change your path
+python macro.py
 ```
 
 ## Contact
