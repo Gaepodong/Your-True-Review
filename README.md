@@ -39,7 +39,7 @@
 |flask| The web framework used |
 |bootstrap| The web framework used |
 
-### 구조
+### Directories
 ```
 .
 ├── README.md
@@ -102,6 +102,9 @@ cd Your-True-Review/web && pip install -r requirements.txt
 ```
 flask run
 ```
+
+### Run
+![image](/attachments/8e33d067-fbb2-4eb4-b298-2c8224f6037a)
 
 ## Contact
 
