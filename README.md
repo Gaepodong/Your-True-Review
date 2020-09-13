@@ -102,11 +102,6 @@ cd Your-True-Review/web && pip install -r requirements.txt
 ```
 flask run
 ```
-6. Get Key-Sentences & Wordcloud
-```
-# Change your path
-python macro.py
-```
 
 ## Contact
 
