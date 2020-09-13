@@ -105,7 +105,25 @@ flask run
 
 ### Run
 
+1. Download Model
+
 [Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing)
+
+2. Set device
+```
+# get_model.py line:16
+
+# if you use GPU, 
+device = torch.device("cuda:0")
+# if you use CPU,
+device = torch.device("cpu")
+
+```
+
+3. Abstract Key Sentences & Generate Wordcloud
+```
+python macro.py
+```
 
 ![image](/demonstration.gif)
 
