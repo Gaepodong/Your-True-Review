@@ -66,6 +66,9 @@
 17 directories, 13 files
 ```
 
+### Crawling Workflow
+![image]('/workFlow_png.png')
+
 ## Getting Started
 
 ### Prerequisites
