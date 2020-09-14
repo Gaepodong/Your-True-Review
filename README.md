@@ -153,7 +153,7 @@ flask run
 http://localhost:5000/update
 ```
 
-### Run
+### Abstract Key Sentences & Generate Wordcloud
 
 1. Set device
 ```python
@@ -183,7 +183,7 @@ self.to_model.load_state_dict(torch.load('MODEL_PATH')
 
 font_path = 'FONT_PATH',
 ```
-4. Abstract Key Sentences & Generate Wordcloud - Output will be stored in /data/
+4. Run - Output will be stored in /data/
 ```
 python macro.py
 ```
