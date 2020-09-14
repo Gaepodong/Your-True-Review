@@ -67,7 +67,13 @@
 ```
 
 ### Crawling Workflow
-![image](/workFlow_png.png)
+![image](/crawling_workflow.png)
+
+### Model Workflow
+![image](/model_workflow.png)
+
+### Web Workflow
+![image](/web_workflow.png)
 
 ## Getting Started
 
