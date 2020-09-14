@@ -42,38 +42,37 @@
 ### Directories
 ```
 .
+├── LICENSE
 ├── README.md
 ├── data
-│   ├── wordcloud
-│   └── output
+│   ├── model
+│   ├── output
+│   └── wordcloud
 ├── get_model.py
-├── macro.py ------------------------ Get Key-Sentences & Wordclouds
-├── pytorch_flaskapp.ipynb ---------- Sentiment Analysis & Predict Ratings API Server
+├── image
+├── macro.py
+├── pytorch_flaskapp.ipynb
 ├── rawdata
-├── tagging_rating.ipynb ------------ Train Model
+│   └── 애매한영화
 ├── textrank.py
 └── web
-    ├── README.md
     ├── config.py
     ├── init_db.sh
     ├── migrations
-    ├── nohup.out
-    ├── ranked_reviews
     ├── requirements.txt
-    ├── true_review
     └── true_review.db
 
-17 directories, 13 files
+20 directories, 18 files
 ```
 
 ### Crawling Workflow
-![image](/crawling_workflow.png)
+![image](/image/crawling_workflow.png)
 
 ### Model Workflow
-![image](/model_workflow.png)
+![image](/image/model_workflow.png)
 
 ### Web Workflow
-![image](/web_workflow.png)
+![image](/image/web_workflow.png)
 
 ## Getting Started
 
@@ -134,7 +133,7 @@ device = torch.device("cpu")
 python macro.py
 ```
 
-![image](/demonstration.gif)
+![image](/image/demonstration.gif)
 
 ## Contact
 
