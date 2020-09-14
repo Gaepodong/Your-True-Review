@@ -183,7 +183,7 @@ self.to_model.load_state_dict(torch.load('MODEL_PATH', map_location=device))
 font_path = 'FONT_PATH',
 ```
 4. Run - Output will be stored in /data/
-```
+```bash
 python macro.py
 ```
 
