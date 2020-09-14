@@ -155,21 +155,34 @@ http://localhost:5000/update
 
 ### Run
 
-1. [Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing) and change "Model Path" in get_model.py line:102
+1. Set device
+```python
+# get_model.py line:16
 
-2. Set device in get_model.py line:16
-```
 # if you use GPU, 
 device = torch.device("cuda:0")
 # if you use CPU,
 device = torch.device("cpu")
+```
+
+2. [Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing) and change "Model Path" 
+
+```python 
+# get_model.py line:102
+
+self.to_model.load_state_dict(torch.load('MODEL_PATH', map_location=device)
+
+# if you use GPU,
+self.to_model.load_state_dict(torch.load('MODEL_PATH')
 
 ```
 
-3. If you want to generate Korean wordcloud, 
+3. If you want to generate Korean wordcloud, Download the font to support encoding Korean and change "Font Path"
+```python
+# macro.py line:45.
 
-***Download the font to support encoding Korean and change "Font Path" in macro.py line:45.***
-
+font_path = 'FONT_PATH',
+```
 4. Abstract Key Sentences & Generate Wordcloud - Output will be stored in /data/
 ```
 python macro.py
