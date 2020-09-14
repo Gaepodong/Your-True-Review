@@ -100,7 +100,7 @@
 ```
 git clone https://github.com/Gaepodong/Your-True-Review.git
 ```
-2. Activate Virtualenv
+2. Make Virtualenv and Activate
 ```
 pip install virtualenv && virtualenv [NAME] && source .[NAME]/bin/activate
 ```
@@ -115,6 +115,10 @@ cd Your-True-Review/web && pip install -r requirements.txt
 5. Run the Server
 ```
 flask run
+```
+6. Enter the Sevice page
+```
+http://localhost:5000/update
 ```
 
 ### Run
