@@ -76,10 +76,12 @@
 <p>
     <img src="/image/movie_bert_arch.jpg" width="400">
 </p>
+
 #### 2. Task 1. Classification
 <p>
     <img src="/image/movie_bert_cls.jpg" width="400">
 </p>
+
 #### 3. Task 2. Regression
 <p>
     <img src="/image/movie_bert_pred.jpg" width="400">
