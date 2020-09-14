@@ -41,9 +41,28 @@
 |flask| The web framework used |
 |bootstrap| The web framework used |
 
+### Server
+|Web Server| AWS EC2 Instance|
+|API Server| Goorm IDE|
+
+### USAGE API
+
+```bash
+curl -X POST http://13.124.240.211:55637/predict \
+-d "text"="WANT_TO_ANALYZE_SENTENCE" 
+```
+
+API Return value
+
+  type: Dict
+
+  output: {"emotion_percent": (float) ,"movie_rating": (int) ,"pos_or_neg": (0:negative or 1:positive)}
+
 ### Directories
 ```
 .
+├── API
+│   └── app.py
 ├── LICENSE
 ├── README.md
 ├── data
@@ -53,17 +72,17 @@
 ├── get_model.py
 ├── image
 ├── macro.py
-├── pytorch_flaskapp.ipynb
 ├── rawdata
 ├── textrank.py
 └── web
     ├── config.py
     ├── init_db.sh
     ├── migrations
+    ├── true_review
     ├── requirements.txt
     └── true_review.db
 
-20 directories, 18 files
+21 directories, 20 files
 ```
 
 ### Crawling Workflow
