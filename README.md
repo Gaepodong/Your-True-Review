@@ -12,6 +12,8 @@
     <br />
     <a href="https://github.com/Gaepodong/Your-True-Review"><strong>Explore the Github »</strong></a>
     <br />
+    <a href="http://13.124.8.184:5000/movies/list/"><strong>Explore the Website »</strong></a>
+    <br />
   </p>
 </p>
 
