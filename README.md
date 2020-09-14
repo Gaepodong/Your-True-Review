@@ -72,9 +72,9 @@
 
 ### Movie-BERT Workflow
 <div>
-  <img width="340" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_arch.jpg">
-  <img width="340" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_cls.jpg">
-  <img width="340" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_pred.jpg">
+  <img width="300" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_arch.jpg">
+  <img width="300" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_cls.jpg">
+  <img width="300" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_pred.jpg">
 </div>
 
 ### Web Workflow
