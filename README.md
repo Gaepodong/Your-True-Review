@@ -112,9 +112,7 @@ flask run
 
 ### Run
 
-1. Download Model
-
-[Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing)
+1. [Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing)
 
 2. Set device
 ```
