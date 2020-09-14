@@ -26,7 +26,7 @@
 ## About The Project
 
 <p align="center">
-    <img src="webpage.png" alt="Logo" width="" height="500">
+    <img src="/image/webpage.png" alt="Logo" width="" height="500">
 </p>
 
  __감정 분석 기법을 이용한 영화 평점 자동 부여 및 TextRank를 이용한 대표 리뷰 추출 시스템__    
