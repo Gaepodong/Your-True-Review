@@ -10,8 +10,6 @@
   <p align="center">
     감정분석 및 텍스트랭크를 이용한 영화 대표 리뷰 추출과 평점 부여 서비스
     <br />
-    <a href="https://github.com/Gaepodong/Your-True-Review"><strong>Explore the Github »</strong></a>
-    <br />
     <a href="http://13.124.8.184:5000/movies/list/"><strong>Explore the Website »</strong></a>
     <br />
   </p>
