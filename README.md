@@ -97,7 +97,7 @@ git clone https://github.com/Gaepodong/Your-True-Review.git
 ```
 2. Activate Virtualenv
 ```
-source .venv/bin/activate
+pip install virtualenv && virtualenv [NAME] && source .[NAME]/bin/activate
 ```
 3. Set the environment variables
 ```
