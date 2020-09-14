@@ -166,7 +166,9 @@ device = torch.device("cpu")
 
 ```
 
-3. If you want to generate Korean wordcloud, download the font to support encoding Korean and change "Font Path" in macro.py line:45.
+3. If you want to generate Korean wordcloud, 
+
+***Download the font to support encoding Korean and change "Font Path" in macro.py line:45.***
 
 4. Abstract Key Sentences & Generate Wordcloud - Output will be stored in /data/
 ```
