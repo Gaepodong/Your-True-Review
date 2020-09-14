@@ -53,7 +53,6 @@
 ├── macro.py
 ├── pytorch_flaskapp.ipynb
 ├── rawdata
-│   └── 애매한영화
 ├── textrank.py
 └── web
     ├── config.py
