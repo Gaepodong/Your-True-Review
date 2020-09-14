@@ -70,6 +70,13 @@
 ### Model Workflow
 ![image](/image/model_workflow.png)
 
+### Movie-BERT Workflow
+<div>
+  <img width="200" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_arch.jpg">
+  <img width="200" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_arch.jpg">
+  <img width="200" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_arch.jpg">
+</div>
+
 ### Web Workflow
 ![image](/image/web_workflow.png)
 
