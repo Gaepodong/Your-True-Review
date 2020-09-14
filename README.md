@@ -129,23 +129,23 @@ API Return
 ### Installing
 
 1. Clone the repository
-```
+```bash
 git clone https://github.com/Gaepodong/Your-True-Review.git
 ```
 2. Make Virtualenv and Activate
-```
+```bash
 pip install virtualenv && virtualenv [NAME] && source .[NAME]/bin/activate
 ```
 3. Set the environment variables
-```
+```bash
 export FLASK_APP="true_review" FLASK_ENV="development" API_SERVER="http://13.124.240.211:55637/predict"
 ```
 4. Change the directory and Install the requirements.
-```
+```bash
 cd Your-True-Review/web && pip install -r requirements.txt
 ```
 5. Run the Server
-```
+```bash
 flask run
 ```
 6. Enter the Sevice page
