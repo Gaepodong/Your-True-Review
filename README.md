@@ -12,7 +12,7 @@
     <br />
     <a href="http://13.124.8.184:5000/movies/list/"><strong>Explore the Website »</strong></a>
     <br />
-    <a href="https://www.youtube.com/watch?v=2W03KY3I_a4"><strong>Watch Youtube Instruction »</strong></a>
+    <a href="https://www.youtube.com/watch?v=2W03KY3I_a4"><strong>Watch the Video »</strong></a>
     <br />
   </p>
 </p>
