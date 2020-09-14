@@ -71,11 +71,13 @@
 ![image](/image/model_workflow.png)
 
 ### Movie-BERT Workflow
-<div>
-  <img width="280" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_arch.jpg">
-  <img width="280" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_cls.jpg">
-  <img width="280" src="https://github.com/Gaepodong/Your-True-Review/blob/master/image/movie_bert_pred.jpg">
-</div>
+
+#### 1. Model Architecture
+![image](/image/movie_bert_arch.jpg)
+#### 2. Task 1. Classification
+![image](/image/movie_bert_cls.jpg)
+#### 3. Task 2. Regression
+![image](/image/movie_bert_pred.jpg)
 
 ### Web Workflow
 ![image](/image/web_workflow.png)
