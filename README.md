@@ -42,8 +42,10 @@
 |bootstrap| The web framework used |
 
 ### Server
-|Web Server| AWS EC2 Instance|
-|API Server| Goorm IDE|
+|Server|Platform|
+|:-:|---|
+|Web|AWS EC2 Instance|
+|API|Goorm IDE|
 
 ### USAGE API
 
@@ -52,11 +54,9 @@ curl -X POST http://13.124.240.211:55637/predict \
 -d "text"="WANT_TO_ANALYZE_SENTENCE" 
 ```
 
-API Return value
-
-  type: Dict
-
-  output: {"emotion_percent": (float) ,"movie_rating": (int) ,"pos_or_neg": (0:negative or 1:positive)}
+API Return
+- type: Dict
+- output: {"emotion_percent": (float) ,"movie_rating": (int) ,"pos_or_neg": (0:negative or 1:positive)}
 
 ### Directories
 ```
