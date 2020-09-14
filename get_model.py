@@ -13,7 +13,8 @@ from kobert.pytorch_kobert import get_pytorch_kobert_model
 from transformers import AdamW
 from transformers.optimization import WarmupLinearSchedule
 
-device = torch.device("cuda:0")
+# device = torch.device("cuda:0")
+device = torch.device("cpu")
 
 class BERTClassifier(nn.Module):
     def __init__(self,

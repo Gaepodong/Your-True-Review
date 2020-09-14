@@ -42,13 +42,13 @@ test = test2.get_model()
 soft = nn.Softmax(dim=1)
 
 wordcloud = WordCloud(
-    font_path = '/Library/fonts/NanumBarunpenR.ttf',
+    # font_path = '/Library/fonts/NanumBarunpenR.ttf',
     width = 540,
     height = 250,
     background_color='white'
 )
 
-files = glob.glob('/Users/yohan/Your-True-Review/rawdata/애매한영화/*.csv')
+files = glob.glob('rawdata/애매한영화/*.csv')
 
 for f in trange(len(files)):
     data = pd.read_csv(files[f], encoding='euc-kr')
@@ -57,7 +57,7 @@ for f in trange(len(files)):
     pos_sents = []
     neg_sents = []
     mean = 0
-    name = files[f][44:]
+    name = files[f][24:]
 
     length = 130
     if len(sentences) > 1000:
@@ -165,7 +165,7 @@ for f in trange(len(files)):
         neg_tmp.append(total_len)
         neg_ks.append(neg_tmp)
 
-    with open('/Users/yohan/Your-True-Review/data/애매한영화/' + name, 'w', encoding='euc-kr', newline='') as f2:
+    with open('data/애매한영화/' + name, 'w', encoding='euc-kr', newline='') as f2:
         wr = csv.writer(f2)
         wr.writerow(['movie_id','text_rank','content','emotion', 'rating', 'total_rank_pred', 'posneg_len', 'total_len'])
         for i in pos_ks:
@@ -237,9 +237,9 @@ for f in trange(len(files)):
     pos_fig = plt.figure(figsize=(10, 10))
     plt.imshow(pos_array, interpolation='bilinear')
     plt.axis('off')
-    pos_fig.savefig('/Users/yohan/Your-True-Review/data/wordcloud/' + name[:-4] + '_pos')
+    pos_fig.savefig('data/wordcloud/' + name[:-4] + '_pos')
 
     neg_fig = plt.figure(figsize=(10, 10))
     plt.imshow(neg_array, interpolation='bilinear')
     plt.axis('off')
-    neg_fig.savefig('/Users/yohan/Your-True-Review/data/wordcloud/' + name[:-4] + '_neg')
+    neg_fig.savefig('data/wordcloud/' + name[:-4] + '_neg')
