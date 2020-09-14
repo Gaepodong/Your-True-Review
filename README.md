@@ -170,11 +170,10 @@ device = torch.device("cpu")
 ```python 
 # get_model.py line:102
 
-# if you are using CPU,
-self.to_model.load_state_dict(torch.load('MODEL_PATH', map_location=device))
 # if you are using GPU,
 self.to_model.load_state_dict(torch.load('MODEL_PATH'))
-
+# if you are using CPU,
+self.to_model.load_state_dict(torch.load('MODEL_PATH', map_location=device))
 ```
 
 3. If you want to generate Korean wordcloud, Download the font to support encoding Korean and change "Font Path"
