@@ -155,7 +155,7 @@ http://localhost:5000/update
 
 ### Run
 
-1. [Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing)
+1. [Download Model](https://drive.google.com/file/d/1kA1Yw1vahLPqrzgyLcy4J4XNXHxQXUxG/view?usp=sharing) and change "Model Path" in get_model.py
 
 2. Set device
 ```
@@ -168,7 +168,7 @@ device = torch.device("cpu")
 
 ```
 
-3. Abstract Key Sentences & Generate Wordcloud
+3. Abstract Key Sentences & Generate Wordcloud - Output will be stored in /data/
 ```
 python macro.py
 ```
