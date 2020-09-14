@@ -73,7 +73,9 @@
 ### Movie-BERT Workflow
 
 #### 1. Model Architecture
-![image](/image/movie_bert_arch.jpg)
+<p align="center">
+    <img src="/image/movie_bert_arch.jpg" width="400">
+</p>
 #### 2. Task 1. Classification
 ![image](/image/movie_bert_cls.jpg)
 #### 3. Task 2. Regression
