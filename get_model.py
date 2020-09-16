@@ -82,14 +82,6 @@ class BERTDataset(Dataset):
     def __len__(self):
         return (len(self.labels))
 
-max_len = 64
-batch_size = 64
-warmup_ratio = 0.1
-num_epochs = 30
-max_grad_norm = 1
-log_interval = 200
-learning_rate =  5e-5
-
 class get_model():
     def __init__(self):
         self.bertmodel, self.vocab = get_pytorch_kobert_model()
