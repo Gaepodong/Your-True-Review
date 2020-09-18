@@ -50,7 +50,7 @@
 ### USAGE API
 
 ```bash
-curl -X POST http://13.124.240.211:55637/predict \
+curl -X POST http://13.124.54.4:51830/predict \
 -d "text"="WANT_TO_ANALYZE_SENTENCE" 
 ```
 
