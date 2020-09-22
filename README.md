@@ -12,6 +12,8 @@
     <br />
     <a href="http://13.124.8.184:5000/movies/list/"><strong>Explore the Website »</strong></a>
     <br />
+    <a href="https://42place.innovationacademy.kr/archives/2669"><strong>Explore the Blog »</strong></a>
+    <br />
     <a href="https://www.youtube.com/watch?v=2W03KY3I_a4"><strong>Watch Youtube »</strong></a>
     <br />
     <a href="/감정분석 및 텍스트랭크를 이용한 영화 대표 리뷰 추출과 평점 부여 서비스.pdf"><strong>Read Paper »</strong></a>
